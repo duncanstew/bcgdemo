@@ -1,0 +1,70 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="w-full bg-white">
+    <div class="flex flex-row p-8">
+        <div class="w-4/5 flex flex-col">
+            <div class="h-8 flex">
+                <a class="text-black hover:text-green-500 hover:bg-green-200 hover:rounded-sm flex justify-center" href="{{ url_for('course_home') }}">
+                    <h1 class="mt-1 px-2"> Back to my Course</h1>
+                </a>
+            </div>
+            <div class="p-8">
+                <div class="flex justify-start title text-4xl my-2">
+                    <h1 class="text-black"> Project Management Community</h1>
+                </div>
+                <div class="searchbar flex flex-row">
+                    <div class="search w-5/12 min-w-2/5 h-8 text-white">
+                        <form method="POST" class="">
+                            <input class="search w-full min-w-2/5 h-8 bg-gray-200 text-black" type="email" name="email" placeholder="Search Question"/>
+                        </form>
+                    </div>
+                    <div class="submit">
+                        <button class="px-3 h-8 bg-green-700 ml-4 text-white rounded-sm hover:bg-green-500">
+                            Search
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="header">
+    
+                    </div>
+                    <div class="flex flex-col">
+                        {% for question,response,reaction,resolved in questions %}
+                            <div class="w-full my-4 border border-gray-200 shadow-lg">
+                                <div class="p-6 text-gray-500">
+                                    <h1 class="text-2xl text-black my-2 flex justify-start"> {{ question }}</h1>
+                                    <div class="flex flex-row">
+                                        <h1 class="mr-4 "> {{ response }} Responses </h1>
+                                        <h1 class="mx-4"> {{ reaction }} Reactions </h1>
+                                        <h1 class="mx-4 text-green-600"> {{ resolved }}</h1>
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+                        {% endfor %}
+                    </div>
+    
+                </div>
+            </div>
+            
+    
+        </div>
+        <div class="w-1/5">
+            <div class="bg-gray-200">
+                <div class="flex flex-col p-6">
+                    <h1 class="text-black text-2xl flex justify-start"> Popular Topics</h1>
+                    {% for item in topics %}
+                        <a class="my-2" href="#">
+                            <button class="flex justify-start px-3 py-1 font-thin text-black bg-gray-400">
+                                {{ item }}
+                            </button>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

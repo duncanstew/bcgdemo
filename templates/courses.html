@@ -1,0 +1,86 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="px-20 py-6 flex flex-col">
+    <div class="mt-6 flex justify-start pl-10"> 
+        <h1 class="text-2xl font-semibold text-black"> Welcome Back, Mark! </h1>
+    </div>
+    <div class="content-cards-container flex flex-col">
+        <div class="card flex flex-row rounded-sm p-10">
+            <div class="card-image w-1/4 relative">
+                <img class="object-fill" src="../static/images/course_background_1.png"> </img>
+                <h1 class="absolute inset-0 h-24 w-24 text-xl text-white font-semibold"> </h1>
+            </div>
+            <div class="card-content w-3/4 flex flex-col justify-between border border-gray-200 shadow-lg px-12 py-3 text-black">
+                <div>
+                    <h1 class="flex justify-start text-2xl"> Level 1: Agile Project Management</h1>
+                    <h2 class="flex justify-start text-lg text-gray-600 mb-3"> This is course 1 in the Agile Journey</h2>
+                </div>
+                <div class="border-b border-t border-gray-200">
+                    <div class="flex flex-row text-lg my-2">
+                        <h1 class="date w-1/5"> 11/05/2020</h1>
+                        <h1 class="time w-1/5">4:30 pm</h1>
+                        <h1 class="description flex w-3/5">Live Class: Using Gantt Charts to manage a project</h1>
+                    </div>
+                    <div class="flex flex-row text-lg">
+                        <h1 class="date w-1/5"> 11/07/2020</h1>
+                        <h1 class="time w-1/5">12:00 pm</h1>
+                        <h1 class="description flex w-3/5">Meeting with Coach</h1>
+                    </div>
+                </div>
+                <div class="progress button flex row mt-4">
+                    <div class="relative w-4/5">
+                        <div class="rounded-full bg-gray-300 h-4 mt-1">
+                            <div class="rounded-full bg-bcg-green-first h-4 mt-1 w-8/12">
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="w-1/5 flex justify-center">
+                        <a href="{{ url_for('course_home') }}">
+                            <button class="w-24 py-1 bg-bcg-green-first text-white font-semibold"> Resume </button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card flex flex-row rounded-sm p-10">
+            <div class="card-image w-1/4 relative">
+                <img class="object-cover" src="../static/images/course_background_2.png"> </img>
+            </div>
+            <div class="card-content w-3/4 flex flex-col justify-between border border-gray-200 shadow-lg px-12 py-3 text-black">
+                <div>
+                    <h1 class="flex justify-start text-2xl"> Level 1: Information Technology</h1>
+                    <h2 class="flex justify-start text-lg text-gray-600 mb-3"> This is course 1 in the Information Technology journey.</h2>
+                </div>
+                <div class="border-b border-t border-gray-200">
+                    <div class="flex flex-row text-lg my-2">
+                        <h1 class="description flex w-3/5">No Scheduled Events</h1>
+                    </div>
+                </div>
+                <div class="progress button flex row mt-4">
+                    <div class="relative w-4/5">
+                        <div class="rounded-full bg-gray-300 h-4 mt-1">
+                            <div class="rounded-full bg-bcg-green-first h-4 mt-1 w-5">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/5 flex justify-center">
+                        <a href="{{ url_for('course_home') }}">
+                            <button class="w-24 py-1 bg-bcg-green-first text-white font-semibold"> Start Course </button>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+               

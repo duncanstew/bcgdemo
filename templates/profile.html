@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="w-full h-screen flex flex-col">
+    <div class="background-cover bg-green-200">
+        <img class="object-cover h-48 w-full" src="../static/images/architecture.jpg">
+        </img>
+    </div>
+    <div class="profile info w-4/5 mx-auto">
+        <div class="h-48 w-48 -mt-20 ">
+            <img class="object-contain" src="../static/images/zuck.jpg"></img>
+            <h1 class="text-sm text-black ml-2"> Edit Profile Photo</h1>
+        </div>
+        <div class="h-48 text-black mt-10 flex flex-col w-64">
+            <h1 class="flex justify-start my-2 text-black text-md"> Display Name:   the_zuck</h1>
+            <h1 class="flex justify-start my-2 text-black text-md"> Email: mzuckerberg@facebook.com</h1>
+            <h1 class="flex justify-start my-2 text-black text-md"> Backup Email: mzuckerberg@gmail.com</h1>
+            <button class="px-6 bg-red-700 py-1 rounded-lg text-white"> Reset Password </button>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
